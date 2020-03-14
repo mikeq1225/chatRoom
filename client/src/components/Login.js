@@ -1,18 +1,22 @@
 import React, { useState } from "react"
-import { useAuth } from "../hooks"
+// import { useAuth } from "../hooks"
+// import { useAuth } from "react-auth"
+import { api } from "../lib/Auth"
+import "../styles/Login.css"
 
 export default props => {
   const [username, setUserName] = useState("")
   const [password, setPassword] = useState("")
-  const { login, logout } = useAuth
+  // const { login, logout } = useAuth
 
   function handleLogin(e) {
     e.preventDefault()
-    login(username, password)
+    api.login(username, password)
   }
 
   return (
-    <div>
+    <div className="loginDiv">
+      <h1>ChatRoom</h1>
       <form onSubmit={handleLogin}>
         <input
           type="text"
@@ -28,7 +32,9 @@ export default props => {
         />
         <button type="submit">Log in</button>
       </form>
-      <button onClick={e => logout()}>Log out</button>
+      <div className="logoutDiv">
+        <button onClick={e => api.logout()}>Log out</button>
+      </div>
     </div>
   )
 }
