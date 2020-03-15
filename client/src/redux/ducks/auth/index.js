@@ -28,6 +28,20 @@ export default (state = initialState, action) => {
 }
 
 function authenticate(username, password) {
+  //   return new Promise((resolve, reject) => {
+  //     axios.post("/api/login", { username, password }).then(resp => {
+  //       const token = resp.data.token
+
+  //       interceptor = axios.interceptors.request.use(config => {
+  //         config.headers = { Authentication: `Bearer${token}` }
+  //         resolve({
+  //           type: LOGIN_SUCCESS
+  //         })
+  //       })
+  //     })
+  //     reject({ type: LOGIN_FAILURE })
+  //   })
+  // }
   return dispatch => {
     dispatch({
       type: LOGIN_PENDING

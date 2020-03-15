@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { useAuth } from "../hooks"
 import { Link } from "react-router-dom"
-// import { api } from "../lib/Auth"
 import "../styles/Login.css"
 
 export default props => {
@@ -12,6 +11,9 @@ export default props => {
   function handleLogin(e) {
     e.preventDefault()
     login(username, password)
+    // .then(() => {
+    //   props.history.push("/chatroom")
+    // })
   }
 
   return (
@@ -32,8 +34,10 @@ export default props => {
         />
         <button type="submit">Log in</button>
       </form>
-      <div className="logoutDiv">
-        <Link to="/">ChatRoom</Link>
+      <div className="linkDiv">
+        <p>Not a user?</p>
+        <Link to="/register">Register Here</Link>
+        <Link to="/chatroom">ChatRoom</Link>
       </div>
     </div>
   )
