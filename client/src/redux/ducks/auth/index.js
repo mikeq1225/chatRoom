@@ -52,7 +52,7 @@ function authenticate(username, password) {
 }
 
 function deauthenticate() {
-  axios.interceptors.request.reject(interceptor)
+  axios.interceptors.request.eject(interceptor)
 }
 
 export function useAuth() {
@@ -62,7 +62,7 @@ export function useAuth() {
   )
   const login = (username, password) =>
     dispatch(authenticate(username, password))
-  const logout = () => dispatch(deauthenticate)
+  const logout = () => dispatch(deauthenticate())
 
   return { login, isAuthenticated, logout }
 }

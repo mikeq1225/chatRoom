@@ -1,17 +1,17 @@
 import React, { useState } from "react"
-// import { useAuth } from "../hooks"
-// import { useAuth } from "react-auth"
-import { api } from "../lib/Auth"
+import { useAuth } from "../hooks"
+import { Link } from "react-router-dom"
+// import { api } from "../lib/Auth"
 import "../styles/Login.css"
 
 export default props => {
   const [username, setUserName] = useState("")
   const [password, setPassword] = useState("")
-  // const { login, logout } = useAuth
+  const { login } = useAuth()
 
   function handleLogin(e) {
     e.preventDefault()
-    api.login(username, password)
+    login(username, password)
   }
 
   return (
@@ -33,7 +33,7 @@ export default props => {
         <button type="submit">Log in</button>
       </form>
       <div className="logoutDiv">
-        <button onClick={e => api.logout()}>Log out</button>
+        <Link to="/">ChatRoom</Link>
       </div>
     </div>
   )
