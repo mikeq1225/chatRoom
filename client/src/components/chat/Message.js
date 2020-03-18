@@ -1,5 +1,5 @@
 import React from "react"
-import { useChat } from "../hooks"
+import { useChat } from "../../hooks"
 
 export default props => {
   const { messages } = useChat()
@@ -8,7 +8,7 @@ export default props => {
     <div>
       {messages.map((msg, i) => (
         <p key={"message" + i}>
-          {msg.name}: {msg.message}
+          {msg.user}: {msg.msg} <span>{msg.timestamp}</span>
         </p>
       ))}
     </div>

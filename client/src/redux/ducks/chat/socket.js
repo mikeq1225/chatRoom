@@ -1,10 +1,10 @@
-import io from "socket.io-client"
-import store from "../../store"
+import socket from "../../../socket"
+// import { dispatch } from "../../store"
 import { addMessage } from "./actions"
+import store from "../../store"
 
-const dispatch = store.dispatch
-const socket = io.connect("http://10.255.255.11:3001")
+export default () => {
+  const dispatch = store.dispatch
 
-socket.on("message", msg => dispatch(addMessage(msg)))
-
-export default socket
+  socket.on("new message", msg => dispatch(addMessage(msg)))
+}

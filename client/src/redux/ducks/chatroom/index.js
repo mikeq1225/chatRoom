@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux"
-import axios from "axios"
+import { api } from "react-auth"
 
 const GET_CHATROOM = "chatroom/GET_CHATROOM"
 
@@ -18,7 +18,7 @@ export default (state = initialState, action) => {
 
 function getChatRoom() {
   return dispatch => {
-    axios
+    api
       .get("/api/chatroom")
       .then(resp => {
         dispatch({

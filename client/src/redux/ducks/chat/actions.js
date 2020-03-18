@@ -1,8 +1,8 @@
 import { NEW_MESSAGE } from "./definitions"
 
-export function addMessage(message) {
+export function addMessage(msg) {
   return {
     type: NEW_MESSAGE,
-    payload: message
+    payload: msg
   }
 }
