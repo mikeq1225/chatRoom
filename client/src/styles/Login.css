@@ -1,11 +1,11 @@
-.loginDiv {
+.loginDiv,
+.registerDiv {
   width: 60%;
-  height: 300px;
   margin: 100px auto;
   border: 1px solid black;
 }
 
-h1 {
+/* h1 {
   text-align: center;
 }
 
@@ -34,4 +34,4 @@ button {
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
-}
+} */
