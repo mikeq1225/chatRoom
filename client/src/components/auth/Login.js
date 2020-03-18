@@ -39,9 +39,9 @@ export default props => {
         <Button type="submit">Log in</Button>
       </Form>
       <div className="linkDiv">
-        <p>Not a user?</p>
+        <p>New user?</p>
         <Link to="/register">Register Here</Link>
-        <Link to="/chatroom">ChatRoom</Link>
+        {/* <Link to="/chatroom">ChatRoom</Link> */}
       </div>
     </div>
   )
