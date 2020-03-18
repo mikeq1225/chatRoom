@@ -6,9 +6,6 @@ import "semantic-ui-css/semantic.min.css"
 const Login = React.lazy(() => import("./auth/Login"))
 const ChatRoom = React.lazy(() => import("./chat/ChatRoom"))
 const Register = React.lazy(() => import("./auth/Register"))
-// import ChatRoom from "./ChatRoom"
-// import Login from "./Login"
-// import Register from "./Register"
 
 export default props => {
   return (

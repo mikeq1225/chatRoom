@@ -1,6 +1,12 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr 3fr;
+
+  .messageArea {
+    width: 75%;
+    height: 300px;
+    background: blue;
+  }
 }
 
 span {

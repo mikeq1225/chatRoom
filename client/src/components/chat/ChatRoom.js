@@ -12,7 +12,7 @@ export default props => {
     <div className="grid">
       <MessageAside />
       <div>
-        <Message />
+        <Message username={profile.username} />
         <MessageForm username={profile.username} />
       </div>
     </div>
