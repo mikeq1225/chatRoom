@@ -1,11 +1,12 @@
 import React, { useState } from "react"
-import { api } from "react-auth"
+import { api, useAuth } from "react-auth"
 import { Link } from "react-router-dom"
 import validator from "validator"
 import { Button, Form } from "semantic-ui-react"
 import "../../styles/Login.css"
 
 export default props => {
+  const { signin } = useAuth()
   const [username, setUsername] = useState("")
   const [usernameError, setUsernameError] = useState("")
   const [password, setPassword] = useState("")
@@ -39,8 +40,10 @@ export default props => {
     }
 
     if (valid) {
-      api.post("/api/register", { username, password }).then(() => {
-        props.history.push("/login")
+      api.post("/register", { username, password }).then(data => {
+        signin(username, password).then(() => {
+          props.history.push("/chatroom/general")
+        })
       })
     }
   }
