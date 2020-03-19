@@ -1,14 +1,76 @@
 .grid {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 204px auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 
-  .messageArea {
-    width: 75%;
-    height: 300px;
-    background: blue;
+  aside {
+    background: darkblue;
+
+    .userProfile {
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        color: white;
+      }
+
+      .status {
+        width: 10px;
+        height: 10px;
+        background: greenyellow;
+        border-radius: 50%;
+      }
+
+      button {
+        height: 20px;
+        padding: 2px 6px 4px 6px;
+      }
+    }
   }
-}
 
-span {
-  color: lightgrey;
+  main {
+    position: relative;
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background: blue;
+    }
+
+    section {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      bottom: 80px;
+      background: purple;
+
+      span {
+        color: lightgrey;
+      }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 80px;
+      background: greenyellow;
+    }
+  }
 }

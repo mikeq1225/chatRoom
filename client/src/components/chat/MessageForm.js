@@ -16,7 +16,7 @@ export default props => {
   }
 
   return (
-    <div>
+    <div className="footer">
       <Form onSubmit={handleSubmit}>
         <Input
           onChange={e => setMessage(e.target.value)}
