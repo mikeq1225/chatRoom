@@ -1,20 +1,13 @@
 import React from "react"
-import { useAuth } from "react-auth"
-import Message from "./Message"
-import MessageForm from "./MessageForm"
-import MessageAside from "./MessageAside"
+import RoomMain from "./RoomMain"
+import RoomAside from "./RoomAside"
 import "../../styles/chatroom.scss"
 
 export default props => {
-  const { profile } = useAuth()
-
   return (
     <div className="grid">
-      <MessageAside />
-      <div>
-        <Message username={profile.username} />
-        <MessageForm username={profile.username} />
-      </div>
+      <RoomAside />
+      <RoomMain />
     </div>
   )
 }
