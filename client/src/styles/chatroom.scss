@@ -21,8 +21,10 @@
         align-items: center;
       }
 
-      p {
+      .user {
         color: white;
+        padding: 0;
+        margin: 1px 2px;
       }
 
       .status {
@@ -48,7 +50,12 @@
       left: 0;
       right: 0;
       height: 50px;
-      background: blue;
+      background: darkblue;
+
+      .large {
+        text-align: center;
+        line-height: 53px;
+      }
     }
 
     section {
@@ -57,10 +64,23 @@
       left: 0;
       right: 0;
       bottom: 80px;
-      background: purple;
+      background: blue;
+      padding: 5px 10px;
+      overflow: auto;
+      color: white;
 
-      span {
-        color: lightgrey;
+      p {
+        font-size: 1.1em;
+        margin: 0;
+      }
+
+      .message {
+        padding: 0px 8px;
+      }
+
+      .timeStamp {
+        color: #b2b2b2;
+        font-size: 0.7em;
       }
     }
 
@@ -70,7 +90,54 @@
       right: 0;
       left: 0;
       height: 80px;
-      background: greenyellow;
+      background: darkblue;
+
+      .inputDiv {
+        display: flex;
+        border: 1px solid #0000ff;
+        border-radius: 20px;
+        align-items: center;
+        padding: 10px;
+        margin: 10px 0px;
+        height: 60px;
+
+        .messageText {
+          color: #0000ff;
+          flex-grow: 2;
+          background: transparent;
+          border: 0;
+          padding: 5px;
+          outline: 0;
+        }
+        .messageText::placeholder {
+          color: #0000ff;
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          margin: 0px 15px;
+          justify-content: center;
+
+          .messageColor {
+            width: 35px;
+            height: 35px;
+            background: transparent;
+            cursor: pointer;
+            border: transparent;
+          }
+
+          .messageSize {
+            background: transparent;
+            width: 35px;
+            height: 35px;
+            color: #0000ff;
+            border: 1px solid #0000ff;
+            text-align: center;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }

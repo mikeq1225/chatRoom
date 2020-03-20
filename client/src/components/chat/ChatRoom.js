@@ -7,7 +7,7 @@ export default props => {
   return (
     <div className="grid">
       <RoomAside />
-      <RoomMain />
+      <RoomMain room={props.match.params.roomname} />
     </div>
   )
 }
