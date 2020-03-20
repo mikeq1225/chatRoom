@@ -6,9 +6,9 @@ import Header from "./Header"
 export default props => {
   return (
     <main>
-      <Header />
+      <Header room={props.room} />
       <Message />
-      <MessageForm />
+      <MessageForm room={props.room} />
     </main>
   )
 }

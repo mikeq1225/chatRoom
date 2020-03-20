@@ -39,7 +39,10 @@ router.post("/login", (req, res, next) => {
       const userPassword = saltResults[0].password
       if (sha512(password + salt) === userPassword) {
         //LOG IN
-        const token = jwt.sign({ project: "chatRoom" }, config.get("secret"))
+        const token = jwt.sign(
+          { username: username, project: "chatRoom" },
+          config.get("secret")
+        )
         res.json({
           token: token
         })

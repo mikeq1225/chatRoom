@@ -10,7 +10,7 @@ export default props => {
       <div className="userProfile">
         <div className="profileDiv">
           <Icon name="user secret" color="grey" size="big" />
-          <p>{profile.username}</p>
+          <p className="user">{profile.username}</p>
           <p className="status"></p>
         </div>
         <Button basic inverted color="grey" onClick={e => signout()}>
