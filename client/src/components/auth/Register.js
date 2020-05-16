@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { api, useAuth } from "react-auth"
 import { Link } from "react-router-dom"
 import validator from "validator"
-import { Button, Form, Input } from "semantic-ui-react"
+import { Button, Form } from "semantic-ui-react"
 import "../../styles/Login.scss"
 
 export default (props) => {
