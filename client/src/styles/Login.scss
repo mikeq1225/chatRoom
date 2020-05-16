@@ -1,0 +1,71 @@
+div.container {
+	margin: 100px auto;
+	width: 60%;
+
+	h1 {
+		text-align: center;
+	}
+
+	.loginDiv {
+		border: 1px solid black;
+
+		form.ui {
+			padding: 30px;
+			display: grid;
+			grid-template-columns: 1fr;
+			justify-items: center;
+			grid-gap: 20px;
+
+			div.input {
+				width: 50%;
+			}
+
+			button {
+				width: 25%;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.registerDiv {
+		border: 1px solid black;
+
+		form.ui {
+			padding: 30px;
+			display: grid;
+			grid-template-columns: 1fr;
+			justify-items: center;
+			grid-gap: 20px;
+
+			div.field {
+				margin: 0;
+				width: 50%;
+
+				label {
+				}
+
+				div.input {
+				}
+			}
+
+			button {
+				margin: 0;
+				width: 25%;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.linkDiv {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-items: center;
+		align-items: center;
+		width: 50%;
+		margin: 10px auto;
+
+		p {
+			margin: 0;
+		}
+	}
+}
