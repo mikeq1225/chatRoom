@@ -1,9 +1,9 @@
 {
-  "db": {
-    "host": "localhost",
-    "user": "DBadmin",
-    "password": "x+^_wY5KR=_YRMzEEYeYW8h5",
-    "database": "usersDB"
-  },
-  "secret": "?BBaPBTyC^7qz?#kpkdJ9Ad*^Q2t*K$xxcRZmLBNT6Y@$FB43QPGhpdfu4hc!5MTs9?MakLGSuLnGem6%ErHvXC9t6%?H-m2cFdw"
+	"db": {
+		"host": "localhost",
+		"user": "DBadmin",
+		"password": "x+^_wY5KR=_YRMzEEYeYW8h5",
+		"database": "usersDB"
+	},
+	"secret": "?BBaPBTyC^7qz?#kpkdJ9Ad*^Q2t*K$xxcRZmLBNT6Y@$FB43QPGhpdfu4hc!5MTs9?MakLGSuLnGem6%ErHvXC9t6%?H-m2cFdw"
 }
